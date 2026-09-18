@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L’Agence normande de la biodiversité et du développement durable</title>
+<meta name="description" content="L’Agence accompagne les acteurs normands souhaitant s’engager dans la préservation et la reconquête de la biodiversité et plus généralement dans la transition écologique, économique et sociale.">
+<link rel="canonical" href="https://www.anbdd.fr/">
+<meta name="theme-color" content="#1e9772">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="L’Agence normande de la biodiversité et du développement durable">
+<meta property="og:title" content="L’Agence normande de la biodiversité et du développement durable">
+<meta property="og:description" content="L’Agence accompagne les acteurs normands souhaitant s’engager dans la préservation et la reconquête de la biodiversité.">
+<meta property="og:url" content="https://www.anbdd.fr/">
+<meta property="og:image" content="https://www.anbdd.fr/wp-content/uploads/2021/02/Logo-ANBDD.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/wp-content/themes/anbdd-theme/assets/images/favicon/favicon.ico" sizes="any">
+
+<!--
+  ============================================================================
+  VERSION ALLÉGÉE — page d'accueil ANBDD
+  ----------------------------------------------------------------------------
+  Ce que ce fichier supprime par rapport à la version WordPress actuelle :
+    - jQuery + jQuery Migrate + jQuery UI
+    - les bibliothèques de slider (Slick / Swiper / Owl) et leurs CSS
+    - les feuilles de style de plugins chargées sur toutes les pages
+    - les polices web (remplacées par la pile système, rendu instantané)
+    - les icon fonts (remplacées par des SVG inline, ~1 ko au total)
+    - Google Site Kit / tag manager en chargement bloquant
+
+  Poids de ce document seul : ~55 ko non compressé, ~14 ko en gzip.
+  Le reste du poids de la page dépend des IMAGES : voir la section
+  « IMAGES » en bas de ce fichier pour les commandes de conversion.
+  ============================================================================
+-->
+
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --vert:#1e9772;
+  --vert-fonce:#146e53;
+  --vert-pale:#eef7f3;
+  --encre:#1b2b26;
+  --gris:#5d6b66;
+  --gris-clair:#e3e8e6;
+  --blanc:#fff;
+  --max:1240px;
+  --gout:1rem;
+  --rayon:6px;
+  --ombre:0 2px 8px rgba(27,43,38,.10);
+  --police:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:100%;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html.taille-grande{font-size:112.5%}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;font-family:var(--police);font-size:1rem;line-height:1.6;
+  color:var(--encre);background:var(--blanc);
+}
+img,svg,video{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{line-height:1.2;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.4rem)}
+h2{font-size:clamp(1.5rem,3vw,2.2rem)}
+h3{font-size:1.125rem}
+p{margin:0 0 1em;max-width:70ch}
+ul{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--vert);outline-offset:2px}
+.conteneur{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:1.25rem}
+.saut{position:absolute;left:-9999px}
+.saut:focus{left:1rem;top:1rem;z-index:999;background:var(--blanc);padding:.75rem 1rem;border-radius:var(--rayon)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Barre utilitaire ---------- */
+.barre-haute{background:var(--vert-pale);font-size:.875rem}
+.barre-haute .conteneur{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-block:.5rem}
+.barre-haute a{text-decoration:none}
+.barre-haute a:hover{text-decoration:underline}
+.moment{display:flex;align-items:center;gap:.5rem;font-weight:600}
+.pastille{width:.55rem;height:.55rem;border-radius:50%;background:var(--vert);flex:none}
+.liens-rapides{display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+.utilitaires{margin-left:auto;display:flex;align-items:center;gap:.75rem}
+.reseaux{display:flex;gap:.5rem}
+.reseaux a{display:grid;place-items:center;width:1.85rem;height:1.85rem;border-radius:50%;background:var(--vert);color:#fff}
+.reseaux svg{width:.95rem;height:.95rem;fill:currentColor}
+.taille button{border:1px solid var(--gris-clair);background:#fff;border-radius:var(--rayon);padding:.15rem .45rem;line-height:1}
+.taille button[aria-pressed="true"]{background:var(--vert);color:#fff;border-color:var(--vert)}
+
+/* ---------- En-tête ---------- */
+.entete{position:sticky;top:0;z-index:50;background:#fff;box-shadow:var(--ombre)}
+.entete .conteneur{display:flex;align-items:center;gap:1.5rem;padding-block:.75rem}
+.logo img{width:190px;height:auto}
+.nav-principale{margin-left:auto}
+.nav-principale>ul{display:flex;gap:.25rem}
+.nav-principale>ul>li{position:relative}
+.nav-principale>ul>li>a,.declencheur{
+  display:inline-flex;align-items:center;gap:.35rem;padding:.7rem .9rem;
+  text-decoration:none;font-weight:600;border-radius:var(--rayon);
+}
+.nav-principale>ul>li>a:hover,.declencheur:hover,.declencheur[aria-expanded="true"]{background:var(--vert-pale);color:var(--vert-fonce)}
+.declencheur svg{width:.7rem;height:.7rem;fill:currentColor;transition:transform .2s}
+.declencheur[aria-expanded="true"] svg{transform:rotate(180deg)}
+.megamenu{
+  position:absolute;left:0;top:100%;min-width:min(640px,88vw);
+  background:#fff;box-shadow:var(--ombre);border-top:3px solid var(--vert);
+  border-radius:0 0 var(--rayon) var(--rayon);padding:1.25rem;
+  display:none;columns:2;column-gap:2rem;
+}
+.megamenu[data-ouvert]{display:block}
+.megamenu li{break-inside:avoid;margin-bottom:.35rem}
+.megamenu a{text-decoration:none;font-size:.9rem;display:block;padding:.2rem 0}
+.megamenu a:hover{color:var(--vert-fonce);text-decoration:underline}
+.megamenu .titre-groupe{font-weight:700;color:var(--vert-fonce);margin-top:.5rem}
+.contact{background:var(--vert);color:#fff;padding:.65rem 1.1rem;border-radius:var(--rayon);text-decoration:none;font-weight:600;white-space:nowrap}
+.contact:hover{background:var(--vert-fonce)}
+.burger{display:none;margin-left:auto;padding:.5rem;border:1px solid var(--gris-clair);border-radius:var(--rayon)}
+.burger svg{width:1.4rem;height:1.4rem;fill:currentColor}
+
+@media (max-width:1100px){
+  .burger{display:block}
+  .nav-principale{
+    position:fixed;inset:0 0 0 auto;width:min(380px,90vw);background:#fff;
+    padding:5rem 1.25rem 2rem;overflow-y:auto;transform:translateX(100%);
+    transition:transform .25s ease;box-shadow:var(--ombre);margin:0;
+  }
+  .nav-principale[data-ouvert]{transform:none}
+  .nav-principale>ul{flex-direction:column;gap:0}
+  .nav-principale>ul>li{border-bottom:1px solid var(--gris-clair)}
+  .nav-principale>ul>li>a,.declencheur{width:100%;justify-content:space-between;padding:.9rem .25rem}
+  .megamenu{position:static;min-width:0;columns:1;box-shadow:none;border:0;padding:0 0 1rem .75rem}
+  .entete .contact{display:none}
+}
+
+/* ---------- Héros ---------- */
+.heros{position:relative;min-height:min(78vh,620px);display:grid;align-items:end;isolation:isolate}
+.heros .diapo{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;z-index:-1}
+.heros .diapo[data-active]{opacity:1}
+.heros .diapo img{width:100%;height:100%;object-fit:cover}
+.heros::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.6) 100%)}
+.heros .conteneur{padding-block:3rem 2.5rem;color:#fff}
+.heros h1{max-width:18ch;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.puces{display:flex;gap:.5rem;margin-top:1.25rem}
+.puces button{width:2.25rem;height:.3rem;border-radius:2px;background:rgba(255,255,255,.45)}
+.puces button[aria-current="true"]{background:#fff}
+.recherche{background:var(--vert);padding:1.25rem 0}
+.recherche form{display:flex;gap:.5rem;max-width:640px}
+.recherche input{flex:1;padding:.8rem 1rem;border:0;border-radius:var(--rayon);font:inherit}
+.recherche button{background:var(--vert-fonce);color:#fff;padding:.8rem 1.4rem;border-radius:var(--rayon);font-weight:600}
+
+/* ---------- Sections ---------- */
+section{padding-block:3.5rem}
+.entete-section{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.75rem}
+.entete-section h2{margin:0}
+.lien-tout{text-decoration:none;font-weight:600;color:var(--vert-fonce);border-bottom:2px solid var(--vert);padding-bottom:2px}
+
+.grille{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.carte{display:flex;flex-direction:column;background:#fff;border:1px solid var(--gris-clair);border-radius:var(--rayon);overflow:hidden}
+.carte:hover{box-shadow:var(--ombre)}
+.carte img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.carte .corps{padding:1rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.etiquette{align-self:flex-start;font-size:.75rem;font-weight:700;color:var(--vert-fonce);background:var(--vert-pale);padding:.2rem .55rem;border-radius:100px;text-decoration:none}
+.etiquette:hover{background:var(--vert);color:#fff}
+.date{font-size:.8rem;color:var(--gris)}
+.carte h3{margin:0;font-size:1rem}
+.carte h3 a{text-decoration:none}
+.carte h3 a:hover{text-decoration:underline}
+.carte h3 a::after{content:"";position:absolute;inset:0}
+.carte{position:relative}
+
+.agenda .carte{flex-direction:row;align-items:stretch}
+.agenda .carte img{width:40%;aspect-ratio:auto;flex:none}
+.agenda .quand{font-weight:700;color:var(--vert-fonce)}
+@media (max-width:560px){.agenda .carte{flex-direction:column}.agenda .carte img{width:100%;aspect-ratio:3/2}}
+
+.agence{background:var(--vert-pale)}
+.agence .haut{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.piliers{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2.5rem}
+.pilier img{width:72px;height:72px;object-fit:contain;margin-bottom:.75rem}
+.pilier h3{color:var(--vert-fonce)}
+.pilier p{font-size:.9rem;color:var(--gris);margin:0}
+.bouton{display:inline-block;background:var(--vert);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.3rem;border-radius:var(--rayon)}
+.bouton:hover{background:var(--vert-fonce)}
+
+/* Carrousel dispositifs : défilement natif, aucune librairie */
+.piste{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:.75rem;scrollbar-width:thin}
+.piste>*{scroll-snap-align:start;flex:0 0 min(320px,80%)}
+.dispositif{position:relative;display:grid;align-items:end;min-height:240px;border-radius:var(--rayon);overflow:hidden;background:var(--vert-fonce);color:#fff;text-decoration:none;padding:1.25rem}
+.dispositif span{position:relative;font-weight:700;font-size:1.05rem}
+.fleches{display:flex;gap:.5rem;margin-top:1rem}
+.fleches button{border:1px solid var(--gris-clair);border-radius:50%;width:2.5rem;height:2.5rem;display:grid;place-items:center}
+.fleches button:hover{background:var(--vert);color:#fff;border-color:var(--vert)}
+.fleches svg{width:1rem;height:1rem;fill:currentColor}
+
+.veilles .carte img{aspect-ratio:16/10;object-fit:cover;background:var(--vert-pale)}
+.source{font-size:.8rem;color:var(--gris);font-style:italic}
+
+/* ---------- Newsletter ---------- */
+.newsletter{background:var(--vert);color:#fff}
+.newsletter h2{margin-bottom:.25rem}
+.newsletter form{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:end;margin-top:1.5rem}
+.champ{display:flex;flex-direction:column;gap:.35rem}
+.champ label{font-size:.875rem;font-weight:600}
+.champ select,.champ input{padding:.75rem;border:0;border-radius:var(--rayon);font:inherit}
+.newsletter button[type=submit]{background:var(--encre);color:#fff;padding:.8rem 1.5rem;border-radius:var(--rayon);font-weight:600}
+.mentions{font-size:.8rem;margin-top:1rem;opacity:.9;max-width:80ch}
+.mentions a{color:#fff}
+.pot-a-miel{position:absolute;left:-9999px}
+
+/* ---------- Pied de page ---------- */
+.pied{background:var(--encre);color:#fff;padding-block:3rem 1.5rem;font-size:.9rem}
+.pied a{color:#fff;text-decoration:none}
+.pied a:hover{text-decoration:underline}
+.pied-haut{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.pied h3{font-size:1rem;color:#fff}
+.pied li{margin-bottom:.35rem}
+.partenaires{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.2);padding-top:1.5rem}
+.logos{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-top:1rem}
+.logos a{background:#fff;border-radius:4px;padding:.4rem;display:grid;place-items:center}
+.logos img{height:44px;width:auto;object-fit:contain}
+.bas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.2);font-size:.8rem}
+
+/* ---------- Bandeau cookies ---------- */
+.cookies{position:fixed;inset:auto 1rem 1rem;z-index:100;background:#fff;color:var(--encre);border-radius:var(--rayon);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:1.25rem;max-width:520px;margin-inline:auto;display:none}
+.cookies[data-ouvert]{display:block}
+.cookies p{font-size:.875rem;margin-bottom:.75rem}
+.cookies .actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.cookies .refuser{border:1px solid var(--gris-clair);border-radius:var(--rayon);padding:.6rem 1.1rem}
+</style>
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu principal</a>
+
+<div class="barre-haute">
+  <div class="conteneur">
+    <p class="moment" style="margin:0"><span class="pastille" aria-hidden="true"></span>En ce moment&nbsp;: <a href="https://www.anbdd.fr/actualites/?thematique=actualites-regionales">Actualités Normandie</a></p>
+    <ul class="liens-rapides">
+      <li><a href="https://www.anbdd.fr/lettres-thematiques/lettre-dinfo-anbdd/">Newsletter</a></li>
+      <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/ddtour/">Le service DDTour</a></li>
+      <li><a href="https://www.anbdd.fr/bottin-de-la-snate/">Le bottin de la SNATE</a></li>
+      <li><a href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/">Repéré pour vous</a></li>
+      <li><a href="https://odin.anbdd.fr">Atlas d’ODIN</a></li>
+    </ul>
+    <div class="utilitaires">
+      <div class="taille">
+        <button type="button" data-taille="normale" aria-pressed="true">a</button>
+        <button type="button" data-taille="grande" aria-pressed="false">A</button>
+        <span class="sr">Ajuster la taille du texte</span>
+      </div>
+      <ul class="reseaux">
+        <li><a href="https://www.facebook.com/ANBDD" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-9h3l.5-4H13V6.5c0-1.1.3-1.8 1.9-1.8H17V1.1C16.6 1.1 15.3 1 13.8 1 10.7 1 8.6 2.9 8.6 6.2V9H6v4h2.6v9H13z"/></svg></a></li>
+        <li><a href="https://twitter.com/anbdd_ndie" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3l-6.6 7.5L21.8 21h-6l-4.7-6.1L5.6 21h-3l7-8L2.4 3h6.2l4.3 5.6zm-1.1 16h1.7L7.7 4.7H5.9z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/company/anbdd" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11 0 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.5 8.65 21 11 21 14v7h-4v-6.2c0-1.5-.03-3.4-2.08-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="https://www.anbdd.fr">
+      <img src="https://www.anbdd.fr/wp-content/themes/anbdd-theme/assets/images/logo-anbdd.svg" width="190" height="60" alt="ANBDD — Agence normande de la biodiversité et du développement durable">
+    </a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+    </button>
+
+    <nav class="nav-principale" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li>
+          <button class="declencheur" type="button" aria-expanded="false" aria-controls="m-agence">L’Agence
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5"/></svg></button>
+          <ul class="megamenu" id="m-agence">
+            <li><a href="https://www.anbdd.fr/lagence/" class="titre-groupe">L’Agence</a></li>
+            <li><a href="https://www.anbdd.fr/lagence/qui-sommes-nous/">Qui sommes-nous&nbsp;?</a></li>
+            <li><a href="https://www.anbdd.fr/lagence/lequipe/">L’équipe</a></li>
+            <li><a href="https://www.anbdd.fr/lagence/nos-missions/">Nos missions</a></li>
+            <li><a href="https://www.anbdd.fr/lagence/notre-gouvernance/">Notre gouvernance</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="declencheur" type="button" aria-expanded="false" aria-controls="m-biodiv">Biodiversité
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5"/></svg></button>
+          <ul class="megamenu" id="m-biodiv">
+            <li><a href="https://www.anbdd.fr/biodiversite/la-biodiversite-en-normandie/" class="titre-groupe">La biodiversité en Normandie</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/" class="titre-groupe">Connaissance</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/le-sinp-regional/">Le SINP régional</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/les-indicateurs-normands-de-la-biodiversite/">Les indicateurs normands de la biodiversité</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/les-indicateurs-territoriaux-de-la-biodiversite/">Les indicateurs de biodiversité des EPCI</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/les-suivis-scientifiques/">Les suivis scientifiques</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/connaissance/listes-despeces-et-listes-rouges/">Listes d’espèces et listes rouges</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/gestionnaires-despaces-naturels/" class="titre-groupe">Gestionnaires d’espaces naturels</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/gestionnaires-despaces-naturels/les-espaces-naturels-normands/">Les espaces naturels normands</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/gestionnaires-despaces-naturels/le-mecenaturel/">Mécénaturel</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/gestionnaires-despaces-naturels/bourse-dechange-de-materiel/">Bourse d’échange de matériel</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/collectivites/" class="titre-groupe">Collectivités</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/collectivites/territoires-engages-pour-la-nature/">Territoires Engagés pour la Nature</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/collectivites/les-ateliers-techniques/">Les ateliers techniques</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/collectivites/les-formations/">Les formations</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/aide-au-montage-de-projet/" class="titre-groupe">Appui au montage de projet</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/aide-au-montage-de-projet/catalogue-des-aides/">Catalogue des aides</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/aide-au-montage-de-projet/catalogue-des-acteurs/">Catalogue des acteurs</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/aide-au-montage-de-projet/financement-participatif/">Financement participatif</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/acteurs-tvb/" class="titre-groupe">La trame verte et bleue</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/acteurs-tvb/la-trame-noire/">La trame noire</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/acteurs-tvb/faune-route/">Faune Route Normandie</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/entreprises/" class="titre-groupe">Entreprises</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/entreprises/ateliers-techniques-et-formations/">Ateliers techniques &amp; formations</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/entreprises/les-filieres-et-parcs-dactivites-sengagent/">Filières et parcs d’activités</a></li>
+            <li><a href="https://www.anbdd.fr/biodiversite/entreprises/een/">Entreprises Engagées pour la Nature</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="declencheur" type="button" aria-expanded="false" aria-controls="m-dd">Développement Durable
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5"/></svg></button>
+          <ul class="megamenu" id="m-dd">
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/" class="titre-groupe">Laboratoire d’idées et thèmes</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/accompagnement-au-changement/">Accompagnement au changement</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/concertation-participation/">Concertation &amp; participation</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/sante/">Santé</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/changement-climatique/">Changement climatique</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/adaptation-du-littoral/">Adaptation du littoral</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/economie-circulaire/">Économie circulaire</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/habitat-et-mobilite-durable/">Mobilité durable</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/" class="titre-groupe">Initiatives et stratégies</a></li>
+            <li><a href="https://www.cnodd.anbdd.fr/">Communauté des ODD</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/ambassadeurs-et-partenaires/">Ambassadeurs des ODD</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/ddtour/">Le service DDTour</a></li>
+            <li><a href="https://www.anbdd.fr/bottin-de-la-snate/">Le bottin de la SNATE</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/rndd/">Rencontres Normandes du DD</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/connaissances/" class="titre-groupe">Connaissances</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/connaissances/de-la-connaissance-scientifique-aux-idees-dactions/">De la connaissance aux idées d’actions</a></li>
+            <li><a href="https://www.anbdd.fr/developpement-durable/connaissances/observatoires/">Observatoires</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="declencheur" type="button" aria-expanded="false" aria-controls="m-res">Ressources et médias
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5"/></svg></button>
+          <ul class="megamenu" id="m-res">
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/" class="titre-groupe">Ressources et médias</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/lettres-thematiques/">Lettres thématiques</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/">Repéré pour vous</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/publications/">Publications</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/videotheque/">Vidéothèque</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/les-fiches-retours-dexperience/">Fiches retours d’expériences</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/fiches-ressources/">Répertoire de ressources</a></li>
+            <li><a href="https://www.anbdd.fr/ressources-et-medias/le-biodivhebdo/">Le #BiodivHebdo</a></li>
+            <li><a href="https://www.anbdd.fr/panorama-de-la-biodiversite/">Panorama de la Biodiversité</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="contact" href="https://www.anbdd.fr/nous-contacter/">Nous contacter</a>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- HÉROS : seule la 1re image est chargée en priorité, la 2e est différée -->
+  <section class="heros" aria-roledescription="carrousel" aria-label="Mise en avant">
+    <div class="diapo" data-active>
+      <img src="https://www.anbdd.fr/wp-content/uploads/2026/04/pexels-slimmars-13-197677686-331.jpg"
+           alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+    </div>
+    <div class="diapo">
+      <img src="https://www.anbdd.fr/wp-content/uploads/2024/10/FDecran-2.png"
+           alt="" width="1920" height="1080" loading="lazy" decoding="async">
+    </div>
+    <div class="conteneur">
+      <h1>L’Agence Normande de la Biodiversité et du Développement Durable</h1>
+      <div class="puces" role="group" aria-label="Choisir une image">
+        <button type="button" data-index="0" aria-current="true"><span class="sr">Image 1</span></button>
+        <button type="button" data-index="1" aria-current="false"><span class="sr">Image 2</span></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="recherche">
+    <div class="conteneur">
+      <form action="https://www.anbdd.fr/" method="get" role="search">
+        <label class="sr" for="q">Que recherchez-vous&nbsp;?</label>
+        <input id="q" type="search" name="s" placeholder="Que recherchez-vous ?" required>
+        <button type="submit">Rechercher</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- À LA UNE -->
+  <section aria-labelledby="t-une">
+    <div class="conteneur">
+      <div class="entete-section">
+        <h2 id="t-une">À la une</h2>
+        <a class="lien-tout" href="https://www.anbdd.fr/actualites/">Toutes les actualités</a>
+      </div>
+      <ul class="grille">
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/06/Capture-decran-2026-06-11-095128-920x533.png" alt="" width="920" height="533" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/actualites/?pole=territoires-biodiversite">Biodiversité &amp; Territoires</a>
+            <p class="date" style="margin:0"><time datetime="2026-08-30">30 août 2026</time></p>
+            <h3><a href="https://www.anbdd.fr/enquete-collectivites-du-programme-resist/">Enquête Collectivités du programme RESIST</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/07/papl_sur_hermelles_champeaux_ccamilledelage-1.webp" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/actualites/?pole=especes-habitats">Espèces &amp; Habitats</a>
+            <p class="date" style="margin:0"><time datetime="2026-07-09">9 juillet 2026</time></p>
+            <h3><a href="https://www.anbdd.fr/preserver-la-biodiversite-marine-et-littorale-en-normandie-les-bons-gestes-a-adopter-cet-ete/">Préserver la biodiversité marine et littorale en Normandie&nbsp;: les bons gestes à adopter cet été</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2023/03/back-to-nature-4536616_1920-920x610.jpg" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/actualites/?pole=especes-habitats">Espèces &amp; Habitats</a>
+            <p class="date" style="margin:0"><time datetime="2026-06-24">24 juin 2026</time></p>
+            <h3><a href="https://www.anbdd.fr/forte-chaleur-agissez-face-aux-risques-accrus-pour-la-faune-et-la-flore/">Forte chaleur – Agissez face aux risques accrus pour la faune et la flore</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2021/07/pexels-vojtech-okenka-392018-920x610.jpg" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/actualites/?pole=mobilite-durable">Mobilité durable</a>
+            <p class="date" style="margin:0"><time datetime="2026-06-23">23 juin 2026</time></p>
+            <h3><a href="https://www.anbdd.fr/appel-a-candidature-mobilipro-optimisation-des-deplacements-professionnels/">[Appel à candidature] Mobili’Pro&nbsp;: optimisation des déplacements professionnels</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2021/09/pexels-burst-374631-920x610.jpg" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/actualites/?pole=objectifs-de-developpement-durable">ODD</a>
+            <p class="date" style="margin:0"><time datetime="2026-06-22">22 juin 2026</time></p>
+            <h3><a href="https://www.anbdd.fr/appel-a-idees-recital-odd/">[Appel à idées] RECITAL ODD</a></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section class="agenda" aria-labelledby="t-agenda" style="background:var(--vert-pale)">
+    <div class="conteneur">
+      <div class="entete-section">
+        <h2 id="t-agenda">Agenda</h2>
+        <a class="lien-tout" href="https://www.anbdd.fr/agenda/">Tous les événements</a>
+      </div>
+      <ul class="grille" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))">
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/06/Visuel-test-1-920x610.png" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <p class="quand" style="margin:0"><time datetime="2026-10-02">2 oct. 2026</time></p>
+            <a class="etiquette" href="https://www.anbdd.fr/agenda/?pole=territoires-biodiversite">Biodiversité &amp; Territoires</a>
+            <h3><a href="https://www.anbdd.fr/evenement/rencontre-biodiversite-territoires-collectivites-en-action-pour-la-restauration-ecologique/">[Rencontre] Biodiversité &amp; territoires – Collectivités en action pour la restauration écologique</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/06/image-2-920x610.png" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <p class="quand" style="margin:0"><time datetime="2026-09-29">29 sept. 2026</time></p>
+            <a class="etiquette" href="https://www.anbdd.fr/agenda/?pole=sante">Santé / Environnement</a>
+            <h3><a href="https://www.anbdd.fr/evenement/journee-dechanges-lamenagement-un-levier-pour-prendre-soin-des-normands-et-des-territoires/">[Journée d’échanges] L’aménagement, un levier pour prendre soin des Normands et des territoires</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/05/DJI_20250925100158_0511_D-1-920x610.jpg" alt="" width="920" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <p class="quand" style="margin:0"><time datetime="2026-09-29">29 sept. 2026</time></p>
+            <a class="etiquette" href="https://www.anbdd.fr/agenda/?pole=changement-climatique">Changement climatique</a>
+            <h3><a href="https://www.anbdd.fr/evenement/basse-saane-2050-le-recit-dun-territoire-face-au-changement-climatique/">[Visite DDTour] Basse Saâne 2050&nbsp;: le récit d’un territoire face au changement climatique</a></h3>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2026/05/image20260318103234.jpg-690x610.webp" alt="" width="690" height="610" loading="lazy" decoding="async">
+          <div class="corps">
+            <p class="quand" style="margin:0">16 sept. 2026 – 1<sup>er</sup> mars 2027</p>
+            <a class="etiquette" href="https://www.anbdd.fr/agenda/?pole=changement-climatique">Changement climatique</a>
+            <h3><a href="https://www.anbdd.fr/evenement/mooc-sadapter-au-changement-climatique-avec-les-solutions-fondees-sur-la-nature/">[MOOC] S’adapter au changement climatique avec les Solutions fondées sur la Nature</a></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- L'AGENCE -->
+  <section class="agence" aria-labelledby="t-agence" style="background:#fff">
+    <div class="conteneur">
+      <div class="haut">
+        <div>
+          <h2 id="t-agence">L’agence</h2>
+          <p>L’Agence Normande de la Biodiversité et du Développement Durable accompagne les acteurs normands souhaitant s’engager dans la préservation et la reconquête de la biodiversité et plus généralement dans la transition écologique, économique et sociale.</p>
+        </div>
+        <div>
+          <p>Elle facilite la compréhension des enjeux de la biodiversité et du développement durable, la transmission et le partage des connaissances ainsi que la valorisation des retours d’expériences. Elle suscite l’engagement, encourage l’expérimentation et le déploiement des pratiques durables auprès de ses publics normands.</p>
+          <a class="bouton" href="https://www.anbdd.fr/lagence/">En savoir plus</a>
+        </div>
+      </div>
+      <ul class="piliers">
+        <li class="pilier">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2020/09/FORMATION@2x.png" alt="" width="72" height="72" loading="lazy" decoding="async">
+          <h3>Connaître pour agir</h3>
+          <p>En contribuant au développement, à la mutualisation et à la vulgarisation des connaissances sur la biodiversité et le développement durable.</p>
+        </li>
+        <li class="pilier">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2020/09/FORMATION-2@2x.png" alt="" width="72" height="72" loading="lazy" decoding="async">
+          <h3>Accompagner ceux qui relèvent des défis</h3>
+          <p>En animant des réseaux d’acteurs spécifiques, en apportant conseils et aide au montage et à la réalisation de projets.</p>
+        </li>
+        <li class="pilier">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2020/09/RESSOURCES-MEDIA@2x.png" alt="" width="72" height="72" loading="lazy" decoding="async">
+          <h3>Inspirer pour massifier</h3>
+          <p>En créant des outils d’aide à la décision et en valorisant des retours d’expériences régionaux.</p>
+        </li>
+        <li class="pilier">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2020/09/ANIMATION-DE-RESEAU@2x-1.png" alt="" width="72" height="72" loading="lazy" decoding="async">
+          <h3>Créer des liens</h3>
+          <p>Entre l’ensemble des acteurs du territoire&nbsp;: collectivités, entreprises, enseignement supérieur, recherche, associations…</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NOS DISPOSITIFS -->
+  <section aria-labelledby="t-disp" style="background:var(--vert-pale)">
+    <div class="conteneur">
+      <div class="entete-section"><h2 id="t-disp">Nos dispositifs</h2></div>
+      <div class="piste" id="piste" tabindex="0" aria-label="Liste des dispositifs, défilement horizontal">
+        <a class="dispositif" href="https://www.anbdd.fr/biodiversite/aide-au-montage-de-projet/catalogue-des-aides/"><span>Catalogue des aides</span></a>
+        <a class="dispositif" href="https://www.anbdd.fr/biodiversite/entreprises/een/"><span>Entreprises Engagées pour la Nature</span></a>
+        <a class="dispositif" href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/ambassadeurs-et-partenaires/"><span>Ambassadeurs des ODD</span></a>
+        <a class="dispositif" href="https://www.anbdd.fr/developpement-durable/laboratoire-didees-et-themes-emergents/adaptation-du-littoral/"><span>Adaptation du littoral au changement climatique</span></a>
+      </div>
+      <div class="fleches">
+        <button type="button" data-defile="-1" aria-label="Dispositifs précédents"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8z"/></svg></button>
+        <button type="button" data-defile="1" aria-label="Dispositifs suivants"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8z"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEILLES -->
+  <section class="veilles" aria-labelledby="t-veille">
+    <div class="conteneur">
+      <div class="entete-section">
+        <h2 id="t-veille">Veilles en ligne</h2>
+        <a class="lien-tout" href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/">Tous les articles</a>
+      </div>
+      <ul class="grille" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <li class="carte">
+          <img src="https://www.anbdd.fr/wp-content/uploads/2025/10/1759909358442-1024x1024.jpeg" alt="" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/?pole=territoires-biodiversite">Biodiversité &amp; Territoires</a>
+            <h3><a href="https://ofb.gouv.fr/actualites/dix-ans-agences-regionales-de-la-biodiversite" rel="noopener">Dix ans d’Agences régionales de la biodiversité</a></h3>
+            <p class="source" style="margin:0">Biodiversité, des clés pour agir, n°12, janvier–mars 2026, pp. 43-46</p>
+          </div>
+        </li>
+        <li class="carte">
+          <img src="https://www.arb-idf.fr/fileadmin/_processed_/3/5/csm_climat_nature_BAT_web_af06b3f187.png" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <div class="corps">
+            <a class="etiquette" href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/?type_document=guide">Guide</a>
+            <h3><a href="https://www.arb-idf.fr/nos-travaux/publications/les-solutions-fondees-sur-la-nature-en-ile-de-france/" rel="noopener">Les Solutions fondées sur la Nature en Île-de-France</a></h3>
+            <p class="source" style="margin:0">ARB en Île-de-France, L’Institut Paris Region, 2026, 152 p.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" aria-labelledby="t-news">
+    <div class="conteneur">
+      <h2 id="t-news">Newsletters</h2>
+      <p>Inscrivez-vous à la lettre d’information de l’ANBDD.</p>
+      <!-- ACTION : remplacer par l'endpoint du formulaire existant (Gravity Forms, Brevo, Sendinblue…) -->
+      <form action="#" method="post">
+        <label class="pot-a-miel" for="site">Ne pas remplir</label>
+        <input class="pot-a-miel" id="site" name="site" type="text" tabindex="-1" autocomplete="off">
+        <div class="champ">
+          <label for="thematique">Thématique</label>
+          <select id="thematique" name="thematique" required>
+            <option value="">Choisir une thématique</option>
+            <option>Lettre d’information hebdomadaire</option>
+            <option>Lettre Adaptation au changement climatique</option>
+            <option>Lettre Accompagnement au changement de comportement</option>
+            <option>Lettre précarité et développement durable</option>
+            <option>Lettre de la mobilité durable dans les territoires ruraux</option>
+            <option>Lettre Biodiversité et entreprises</option>
+            <option>Lettre Santé &amp; Développement Durable</option>
+            <option>Lettre Projets Alimentaires de Territoire</option>
+          </select>
+        </div>
+        <div class="champ">
+          <label for="email">Adresse e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div><button type="submit">S’inscrire</button></div>
+      </form>
+      <p class="mentions">Votre adresse de messagerie est uniquement utilisée pour vous envoyer les lettres d’information de l’ANBDD. Vous pouvez à tout moment utiliser le lien de désabonnement intégré dans la newsletter. En savoir plus sur la <a href="https://www.anbdd.fr/politique-de-confidentialite/">gestion de vos données et vos droits</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-haut">
+      <div>
+        <h3>L’Agence normande de la biodiversité et du développement durable</h3>
+        <p>Site de Rouen&nbsp;: L’Atrium<br>115 boulevard de l’Europe<br>76100 Rouen<br>
+        <a href="https://drive.google.com/file/d/12P7OFm0lCgw9gvfSttZBM54aJR9Dex-9/view?usp=sharing" rel="noopener">Fiche d’accès</a></p>
+        <p>Site de Caen&nbsp;: Citis - Pentacle<br>5 avenue Tsukuba<br>14200 Hérouville-Saint-Clair</p>
+      </div>
+      <nav aria-label="Rubriques">
+        <h3>Rubriques</h3>
+        <ul>
+          <li><a href="https://www.anbdd.fr/lagence/">L’Agence</a></li>
+          <li><a href="https://www.anbdd.fr/biodiversite/">Biodiversité</a></li>
+          <li><a href="https://www.anbdd.fr/developpement-durable/">Développement Durable</a></li>
+          <li><a href="https://www.anbdd.fr/ressources-et-medias/">Ressources et médias</a></li>
+          <li><a href="https://www.anbdd.fr/actualites/">Actualités</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Raccourcis">
+        <h3>Raccourcis</h3>
+        <ul>
+          <li><a href="https://www.anbdd.fr/agenda/">Agenda</a></li>
+          <li><a href="https://www.anbdd.fr/ressources-et-medias/repere-pour-vous/">Repéré pour vous</a></li>
+          <li><a href="https://www.anbdd.fr/developpement-durable/initiatives-et-experiences/ambassadeurs-et-partenaires/">Ambassadeurs des ODD</a></li>
+          <li><a href="https://www.anbdd.fr/nous-contacter/">Nous contacter</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Suivez-nous</h3>
+        <ul class="reseaux">
+          <li><a href="https://www.facebook.com/ANBDD" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-9h3l.5-4H13V6.5c0-1.1.3-1.8 1.9-1.8H17V1.1C16.6 1.1 15.3 1 13.8 1 10.7 1 8.6 2.9 8.6 6.2V9H6v4h2.6v9H13z"/></svg></a></li>
+          <li><a href="https://twitter.com/anbdd_ndie" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3l-6.6 7.5L21.8 21h-6l-4.7-6.1L5.6 21h-3l7-8L2.4 3h6.2l4.3 5.6zm-1.1 16h1.7L7.7 4.7H5.9z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/anbdd" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11 0 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.5 8.65 21 11 21 14v7h-4v-6.2c0-1.5-.03-3.4-2.08-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="partenaires">
+      <h3>Les membres associés du GIP ANBDD</h3>
+      <!-- 28 logos : tous en lazy loading, hauteur fixe pour éviter les décalages de mise en page -->
+      <div class="logos">
+        <a href="https://www.prefectures-regions.gouv.fr/normandie" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/prefet-de-la-region-normandie.jpg" alt="Préfet de la région Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.normandie.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/region-normandie.jpg" alt="Région Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://ofb.gouv.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/ofb.jpg" alt="Office français de la biodiversité" height="44" loading="lazy" decoding="async"></a>
+        <a href="http://www.normandie-univ.fr/accueil-845.kjsp" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2021/06/nu.png" alt="Normandie Université" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://eureennormandie.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/eure-departement.jpg" alt="Département de l’Eure" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.seinemaritime.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/seine-maritime-departement-e1600860120347.jpg" alt="Département de Seine-Maritime" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.calvados.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/calvados-departement.jpg" alt="Département du Calvados" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.orne.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/10/index-e1602065295872.jpg" alt="Département de l’Orne" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.manche.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/manche-departement.jpg" alt="Département de la Manche" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.metropole-rouen-normandie.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/10/Metropole.jpg" alt="Métropole Rouen Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.lehavreseinemetropole.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/le-havre-seine-metropole.jpg" alt="Le Havre Seine Métropole" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.caenlamer.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/caen-la-mer.jpg" alt="Caen la Mer" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.agglo-seine-eure.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/10/CASE-1.png" alt="Agglomération Seine-Eure" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.cauxseine.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2024/09/Caux.png" alt="Caux Seine Agglo" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://lecotentin.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/le-cotentin.jpg" alt="Agglomération du Cotentin" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.pnr-seine-normande.com/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/pnrbsn.jpg" alt="Parc naturel régional des Boucles de la Seine Normande" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.onf.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/office-national-des-forets.jpg" alt="Office national des forêts" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://normandie.chambres-agriculture.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2025/02/Chambre-agri-20.jpg" alt="Chambre d’agriculture de Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="http://cen-normandie.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/cen.jpg" alt="Conservatoire d’espaces naturels de Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.chasseurdefrance.com/pratiquer/annuaire-des-federations/federation-regionale-de-normandie/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2025/05/FEDE-CHASSE.png" alt="Fédération régionale des chasseurs de Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.natrangroupe.com/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2026/03/Natran-100.jpg" alt="Natran" height="44" loading="lazy" decoding="async"></a>
+        <a href="http://www.unicem.fr/accueil/la-federation/regions/normandie/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/unicem-normandie.jpg" alt="UNICEM Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.cerfrance.fr/agence-expert-comptable/cerfrance-normandie-ouest/expert-comptable-fleury-sur-orne-siege" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/08/cerfrance.jpg" alt="Cerfrance Normandie Ouest" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.saur.com/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2023/09/Saur.png" alt="Saur" height="44" loading="lazy" decoding="async"></a>
+        <a href="http://www.saferdenormandie.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2020/10/SAFER-2.jpg" alt="SAFER de Normandie" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.reseau-astuce.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2026/03/Natran_1-100.jpg" alt="Réseau Astuce" height="44" loading="lazy" decoding="async"></a>
+        <a href="https://www.federation-peche14.fr/" rel="noopener"><img src="https://www.anbdd.fr/wp-content/uploads/2022/12/Peche-bas-de-page.png" alt="Fédération de pêche du Calvados" height="44" loading="lazy" decoding="async"></a>
+      </div>
+    </div>
+
+    <div class="bas">
+      <p style="margin:0">© ANBDD — 2026</p>
+      <ul style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <li><a href="https://www.anbdd.fr/mentions-legales/">Mentions légales</a></li>
+        <li><a href="https://www.anbdd.fr/politique-de-confidentialite/">Politique de confidentialité</a></li>
+        <li><button type="button" id="ouvrir-cookies" style="text-decoration:underline">Cookies</button></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="dialog" aria-modal="false" aria-labelledby="t-cookies">
+  <h3 id="t-cookies">Cookies</h3>
+  <p>Nous utilisons des cookies de mesure d’audience pour comprendre comment le site est consulté. Aucune donnée n’est transmise à des régies publicitaires.</p>
+  <div class="actions">
+    <button class="bouton" type="button" data-cookies="oui">Accepter</button>
+    <button class="refuser" type="button" data-cookies="non">Refuser</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* --- Menu mobile --- */
+  var burger=$(".burger"), nav=$("#menu");
+  burger.addEventListener("click",function(){
+    var ouvert=nav.hasAttribute("data-ouvert");
+    ouvert?nav.removeAttribute("data-ouvert"):nav.setAttribute("data-ouvert","");
+    burger.setAttribute("aria-expanded",String(!ouvert));
+  });
+
+  /* --- Méga-menus (clic, accessible au clavier) --- */
+  var declencheurs=$$(".declencheur");
+  function fermerTout(sauf){
+    declencheurs.forEach(function(d){
+      if(d===sauf)return;
+      d.setAttribute("aria-expanded","false");
+      $("#"+d.getAttribute("aria-controls")).removeAttribute("data-ouvert");
+    });
+  }
+  declencheurs.forEach(function(d){
+    var panneau=$("#"+d.getAttribute("aria-controls"));
+    d.addEventListener("click",function(){
+      var ouvert=d.getAttribute("aria-expanded")==="true";
+      fermerTout(d);
+      d.setAttribute("aria-expanded",String(!ouvert));
+      ouvert?panneau.removeAttribute("data-ouvert"):panneau.setAttribute("data-ouvert","");
+    });
+  });
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nav-principale"))fermerTout(null);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){fermerTout(null);nav.removeAttribute("data-ouvert");burger.setAttribute("aria-expanded","false");}
+  });
+
+  /* --- Taille du texte --- */
+  var memoire=null;
+  try{memoire=localStorage.getItem("anbdd-taille")}catch(e){}
+  function appliquerTaille(t){
+    document.documentElement.classList.toggle("taille-grande",t==="grande");
+    $$("[data-taille]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.taille===t))});
+    try{localStorage.setItem("anbdd-taille",t)}catch(e){}
+  }
+  if(memoire)appliquerTaille(memoire);
+  $$("[data-taille]").forEach(function(b){
+    b.addEventListener("click",function(){appliquerTaille(b.dataset.taille)});
+  });
+
+  /* --- Carrousel du héros (CSS + 15 lignes de JS, pas de librairie) --- */
+  var diapos=$$(".heros .diapo"), puces=$$(".puces button"), i=0, minuteur;
+  var animationOk=!window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function montrer(n){
+    i=(n+diapos.length)%diapos.length;
+    diapos.forEach(function(d,k){k===i?d.setAttribute("data-active",""):d.removeAttribute("data-active")});
+    puces.forEach(function(p,k){p.setAttribute("aria-current",String(k===i))});
+  }
+  function lancer(){if(animationOk)minuteur=setInterval(function(){montrer(i+1)},6000)}
+  function stopper(){clearInterval(minuteur)}
+  puces.forEach(function(p){p.addEventListener("click",function(){stopper();montrer(+p.dataset.index);lancer()})});
+  var heros=$(".heros");
+  heros.addEventListener("mouseenter",stopper);
+  heros.addEventListener("mouseleave",lancer);
+  lancer();
+
+  /* --- Défilement des dispositifs --- */
+  var piste=$("#piste");
+  $$("[data-defile]").forEach(function(b){
+    b.addEventListener("click",function(){
+      piste.scrollBy({left:(+b.dataset.defile)*(piste.clientWidth*0.8),behavior:animationOk?"smooth":"auto"});
+    });
+  });
+
+  /* --- Bandeau cookies --- */
+  var bandeau=$("#cookies"), choix=null;
+  try{choix=localStorage.getItem("anbdd-cookies")}catch(e){}
+  if(!choix)bandeau.setAttribute("data-ouvert","");
+  $$("[data-cookies]").forEach(function(b){
+    b.addEventListener("click",function(){
+      try{localStorage.setItem("anbdd-cookies",b.dataset.cookies)}catch(e){}
+      bandeau.removeAttribute("data-ouvert");
+      if(b.dataset.cookies==="oui")chargerMesure();
+    });
+  });
+  $("#ouvrir-cookies").addEventListener("click",function(){bandeau.setAttribute("data-ouvert","")});
+  if(choix==="oui")chargerMesure();
+
+  /* Le script de mesure d'audience n'est chargé qu'après consentement,
+     et jamais pendant le rendu initial de la page. */
+  function chargerMesure(){
+    /* Exemple : décommenter et adapter à l'outil utilisé (Matomo, GA4…)
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://…";
+    document.head.appendChild(s);
+    */
+  }
+})();
+</script>
+
+<!--
+  ============================================================================
+  IMAGES — c'est ici que se joue le reste du poids
+  ----------------------------------------------------------------------------
+  Ce fichier pointe encore vers les images actuelles du site. Tant qu'elles ne
+  sont pas ré-encodées, la page restera lourde. À faire, par ordre de gain :
+
+  1) Les deux visuels du héros sont les plus gros fichiers de la page.
+     Les convertir en AVIF/WebP à 1920 px de large maximum :
+
+       cwebp -q 78 -resize 1920 0 pexels-slimmars-13-197677686-331.jpg \
+             -o pexels-slimmars-13-197677686-331.webp
+       avifenc -q 60 pexels-slimmars-13-197677686-331.jpg \
+               pexels-slimmars-13-197677686-331.avif
+
+     FDecran-2.png est un PNG : en JPEG ou WebP, le gain est en général d'un
+     facteur 8 à 15. Un PNG ne se justifie que pour de la transparence.
+
+  2) Les logos partenaires (28 fichiers JPG/PNG affichés à 44 px de haut).
+     Les redimensionner à leur taille réelle d'affichage :
+
+       mogrify -path ./optim -resize x88 -quality 82 -format webp *.jpg *.png
+
+     (x88 = 44 px × 2 pour les écrans haute densité.)
+
+  3) Les 4 pictogrammes @2x.png de la section « L'agence » gagneraient à être
+     des SVG : quelques centaines d'octets au lieu de plusieurs dizaines de ko.
+
+  4) Une fois les fichiers WebP/AVIF en place, remplacer chaque <img> par :
+
+       <picture>
+         <source srcset="visuel.avif" type="image/avif">
+         <source srcset="visuel.webp" type="image/webp">
+         <img src="visuel.jpg" width="920" height="610" alt="" loading="lazy" decoding="async">
+       </picture>
+
+  AUTRES POINTS À VÉRIFIER CÔTÉ SERVEUR
+    - compression gzip ou brotli activée sur .html, .css, .js, .svg
+    - en-têtes Cache-Control longs (1 an) sur /wp-content/uploads/
+    - HTTP/2 ou HTTP/3
+  ============================================================================
+-->
+</body>
+</html>
